@@ -59,7 +59,7 @@ bool usuarios::loginUsuarios()
         if (buscar(usuario, contra))
         {
             ingresa = true;
-            cout << "\n=== Bienvenido al Sistema ===" << endl;
+            cout << "\n=== Bienvenido al Sistema "<<usuario<< "===" << endl;
             bitacora auditoria;
             auditoria.insertar(name, 100, "LOGS", "Inicio exitoso");
             cin.get();
