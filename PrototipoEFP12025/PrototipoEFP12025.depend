@@ -1,0 +1,32 @@
+# depslib dependency file v1.0
+1748447298 source:c:\users\lava2\desktop\prototipoefp12025\prototipoefp12025\src\usuario.cpp
+	"Usuario.h"
+	<fstream>
+
+1748447312 c:\users\lava2\desktop\prototipoefp12025\prototipoefp12025\include\usuario.h
+	<string>
+
+1748447583 source:c:\users\lava2\desktop\prototipoefp12025\prototipoefp12025\main.cpp
+	<iostream>
+	<fstream>
+	<vector>
+	"Usuario.h"
+	"Catalogo.h"
+	"Bitacora.h"
+
+1748447785 c:\users\lava2\desktop\prototipoefp12025\prototipoefp12025\include\catalogo.h
+	<vector>
+	<string>
+
+1748447695 c:\users\lava2\desktop\prototipoefp12025\prototipoefp12025\include\bitacora.h
+	<string>
+
+1748447683 source:c:\users\lava2\desktop\prototipoefp12025\prototipoefp12025\src\bitacora.cpp
+	"Bitacora.h"
+	<fstream>
+	<ctime>
+
+1748447797 source:c:\users\lava2\desktop\prototipoefp12025\prototipoefp12025\src\catalogo.cpp
+	"Catalogo.h"
+	<iostream>
+
