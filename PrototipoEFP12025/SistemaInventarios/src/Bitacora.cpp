@@ -86,7 +86,7 @@ void bitacora::insertar(string nombre, int codigoDummy, string aplicacion, strin
     strftime(entrada.fecha, sizeof(entrada.fecha), "%b %d %Y", timeinfo);
     strftime(entrada.hora, sizeof(entrada.hora), "%H:%M:%S", timeinfo);
 
-    // Guardar en archivo binario
+    // Guardar en archivo binarioo
     binFile.open("bitacora.dat", ios::app | ios::binary);
     binFile.write(reinterpret_cast<char*>(&entrada), sizeof(entrada));
     binFile.close();
@@ -102,7 +102,7 @@ void bitacora::desplegar() {
     cout << "\n------------------- Bitácora -------------------\n";
     binFile.open("bitacora.dat", ios::in | ios::binary);
     if (!binFile) {
-        cout << "\n\t\t\tNo hay información...\n";
+        cout << "\n\t\t\tNo hay  información...\n";
     } else {
         while (binFile.read(reinterpret_cast<char*>(&entrada), sizeof(entrada))) {
             cout << "-----------------------------------------------\n";
