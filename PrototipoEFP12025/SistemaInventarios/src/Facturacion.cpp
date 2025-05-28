@@ -3,7 +3,6 @@ Facturacion::Facturacion() {
     total = 0;
 }
 
-//funcion ingreso de datos para facturacion
 void Facturacion::generarFactura(Inventario& inventario) {
     total = 0;
     string opc2 = "1";
@@ -12,30 +11,30 @@ void Facturacion::generarFactura(Inventario& inventario) {
     cout << "Ingrese los datos del cliente:\n";
     cout << "Nombre: "; cin >> now;
     cout << "Apellido: "; cin >> ape;
-    cout << "CÃ©dula: "; cin >> ced;
-    cout << "TelÃ©fono: "; cin >> tel;
-    cout << "DirecciÃ³n: "; cin.ignore(); getline(cin, dir);
+    cout << "Cédula: "; cin >> ced;
+    cout << "Teléfono: "; cin >> tel;
+    cout << "Dirección: "; cin.ignore(); getline(cin, dir);
 
-    while (opc2 == "1") { //correcciÃ³n de error de desbordamiento al ingresaar tipos de datos incompatibles con el tipo de variables
+    while (opc2 == "1") {
         ProductoFactura nuevoProducto;
-        cout << "CÃ³digo del producto: ";
+        cout << "Código del producto: ";
         cin >> nuevoProducto.CodigoSeleccionado;
         cout << "Cantidad: ";
         cin >> nuevoProducto.CantidadLlevada;
 
         listprod.push_back(nuevoProducto);
 
-        cout << "Å¼Desea agregar otro producto? 1(SÃ­), 2(No): ";
+        cout << "¿Desea agregar otro producto? 1(Sí), 2(No): ";
         cin >> opc2;
     }
 
     cout << "\n----- FACTURA -----\n";
     cout << "Cliente: " << now << " " << ape << "\n";
-    cout << "CÃ©dula: " << ced << "\n";
-    cout << "TelÃ©fono: " << tel << "\n";
-    cout << "DirecciÃ³n: " << dir << "\n\n";
+    cout << "Cédula: " << ced << "\n";
+    cout << "Teléfono: " << tel << "\n";
+    cout << "Dirección: " << dir << "\n\n";
 
-    cout << left << setw(10) << "CÃ³digo"
+    cout << left << setw(10) << "Código"
          << setw(20) << "Producto"
          << setw(10) << "Cantidad"
          << setw(10) << "Precio"
@@ -54,7 +53,7 @@ void Facturacion::generarFactura(Inventario& inventario) {
                  << setw(10) << p->precio
                  << setw(10) << subtotal << endl;
         } else {
-            cout << "Producto con cÃ³digo " << prod.CodigoSeleccionado << " no encontrado.\n";
+            cout << "Producto con código " << prod.CodigoSeleccionado << " no encontrado.\n";
         }
     }
 
@@ -62,5 +61,5 @@ void Facturacion::generarFactura(Inventario& inventario) {
 }
 
 Facturacion::~Facturacion() {
-    // Destructor vacÃ­o
+    // Destructor vacío
 }

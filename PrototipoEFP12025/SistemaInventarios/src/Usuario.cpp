@@ -96,7 +96,7 @@ void usuarios::consultarUsuarios()
 
     if (!file)
     {
-        cout << "\n\t\t\t No hay información de usuarios..." << endl;
+        cout << "\n\t\t\t No hay informaciÃ³n de usuarios..." << endl;
         cin.get();
         return;
     }
@@ -332,9 +332,9 @@ void usuarios::modificarUsuarios()
 
     if (!file)
     {
-        cout << "\n\t\t\t Error: No hay información de usuarios." << endl;
+        cout << "\n\t\t\t Error: No hay informaciÃ³n de usuarios." << endl;
         bitacora auditoria;
-        auditoria.insertar(usuarioBuscado, 100, "LOGF", "Intento de modificación fallido: archivo no encontrado");
+        auditoria.insertar(usuarioBuscado, 100, "LOGF", "Intento de modificaciÃ³n fallido: archivo no encontrado");
         cout << "\n\t\t\t Presione Enter para continuar...";
         cin.get();
         return;
@@ -363,7 +363,7 @@ void usuarios::modificarUsuarios()
     {
         cout << "\n\t\t\t Error: El usuario no existe." << endl;
         bitacora auditoria;
-        auditoria.insertar(usuarioBuscado, 100, "LOGF", "Intento de modificación fallido: usuario no encontrado");
+        auditoria.insertar(usuarioBuscado, 100, "LOGF", "Intento de modificaciÃ³n fallido: usuario no encontrado");
         cout << "\n\t\t\t Presione Enter para continuar...";
         cin.get();
         return;
@@ -406,7 +406,7 @@ void usuarios::modificarUsuarios()
         {
             cout << "\n\t\t\t Error: El nuevo nombre de usuario ya existe." << endl;
             bitacora auditoria;
-            auditoria.insertar(nuevoNombre, 100, "LOGF", "Intento de modificación fallido: nombre de usuario existente");
+            auditoria.insertar(nuevoNombre, 100, "LOGF", "Intento de modificaciÃ³n fallido: nombre de usuario existente");
             cout << "\n\t\t\t Presione Enter para continuar...";
             cin.get();
             return;
@@ -459,7 +459,7 @@ void usuarios::modificarUsuarios()
     {
         cout << "\n\t\t\t Error al abrir el archivo para escritura." << endl;
         bitacora auditoria;
-        auditoria.insertar(usuarioBuscado, 100, "LOGF", "Intento de modificación fallido: error al escribir archivo");
+        auditoria.insertar(usuarioBuscado, 100, "LOGF", "Intento de modificaciÃ³n fallido: error al escribir archivo");
         cout << "\n\t\t\t Presione Enter para continuar...";
         cin.get();
         return;
@@ -499,9 +499,9 @@ void usuarios::eliminarUsuarios()
 
     if (!file)
     {
-        cout << "\n\t\t\t Error: No hay información de usuarios." << endl;
+        cout << "\n\t\t\t Error: No hay informaciÃ³n de usuarios." << endl;
         bitacora auditoria;
-        auditoria.insertar(usuarioBuscado, 100, "LOGF", "Intento de eliminación fallido: archivo no encontrado");
+        auditoria.insertar(usuarioBuscado, 100, "LOGF", "Intento de eliminaciÃ³n fallido: archivo no encontrado");
         cout << "\n\t\t\t Presione Enter para continuar...";
         cin.get();
         return;
@@ -531,7 +531,7 @@ void usuarios::eliminarUsuarios()
     {
         cout << "\n\t\t\t Error: El usuario no existe." << endl;
         bitacora auditoria;
-        auditoria.insertar(usuarioBuscado, 100, "LOGF", "Intento de eliminación fallido: usuario no encontrado");
+        auditoria.insertar(usuarioBuscado, 100, "LOGF", "Intento de eliminaciÃ³n fallido: usuario no encontrado");
         cout << "\n\t\t\t Presione Enter para continuar...";
         cin.get();
         return;
@@ -544,27 +544,27 @@ void usuarios::eliminarUsuarios()
     cout << "\tContrasena: " << contrasenaActual << endl;
 
     char confirmacion;
-    cout << "\n\t¿Está seguro de eliminar este usuario? (S/N): ";
+    cout << "\n\tÂ¿EstÃ¡ seguro de eliminar este usuario? (S/N): ";
     confirmacion = toupper(getch());
     cout << confirmacion << endl;
 
     if (confirmacion != 'S')
     {
-        cout << "\n\t\t\t Eliminación cancelada." << endl;
+        cout << "\n\t\t\t EliminaciÃ³n cancelada." << endl;
         bitacora auditoria;
-        auditoria.insertar(nombreActual, 100, "LOGF", "Eliminación cancelada por el usuario");
+        auditoria.insertar(nombreActual, 100, "LOGF", "EliminaciÃ³n cancelada por el usuario");
         cout << "\n\t\t\t Presione Enter para continuar...";
         cin.get();
         return;
     }
 
-    // Escribir las líneas restantes al archivo
+    // Escribir las lÃ­neas restantes al archivo
     file.open("Usuarios.txt", ios::out | ios::trunc);
     if (!file)
     {
         cout << "\n\t\t\t Error al abrir el archivo para escritura." << endl;
         bitacora auditoria;
-        auditoria.insertar(nombreActual, 100, "LOGF", "Intento de eliminación fallido: error al escribir archivo");
+        auditoria.insertar(nombreActual, 100, "LOGF", "Intento de eliminaciÃ³n fallido: error al escribir archivo");
         cout << "\n\t\t\t Presione Enter para continuar...";
         cin.get();
         return;
@@ -576,7 +576,7 @@ void usuarios::eliminarUsuarios()
     }
     file.close();
 
-    // Registrar en bitácora
+    // Registrar en bitÃ¡cora
     bitacora auditoria;
     auditoria.insertar(nombreActual, 100, "LOGS", "Usuario eliminado exitosamente");
 
