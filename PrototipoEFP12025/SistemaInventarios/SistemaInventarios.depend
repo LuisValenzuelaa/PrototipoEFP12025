@@ -638,11 +638,11 @@
 	<ctime>
 	<iomanip>
 
-1748449064 source:c:\users\lava2\desktop\prototipoefp12025\prototipoefp12025\sistemainventarios\src\menu.cpp
+1748450040 source:c:\users\lava2\desktop\prototipoefp12025\prototipoefp12025\sistemainventarios\src\menu.cpp
 	"Menu.h"
 	"Bitacora.h"
 
-1748449072 source:c:\users\lava2\desktop\prototipoefp12025\prototipoefp12025\sistemainventarios\src\producto.cpp
+1748450260 source:c:\users\lava2\desktop\prototipoefp12025\prototipoefp12025\sistemainventarios\src\producto.cpp
 	"Producto.h"
 
 1747975355 source:c:\users\lava2\desktop\prototipoefp12025\prototipoefp12025\sistemainventarios\src\proveedor.cpp
@@ -658,7 +658,7 @@
 	<string>
 	"Bitacora.h"
 
-1747975355 source:c:\users\lava2\desktop\prototipoefp12025\prototipoefp12025\sistemainventarios\src\usuario.cpp
+1748450251 source:c:\users\lava2\desktop\prototipoefp12025\prototipoefp12025\sistemainventarios\src\usuario.cpp
 	"Usuario.h"
 	<fstream>
 	<cstdlib>

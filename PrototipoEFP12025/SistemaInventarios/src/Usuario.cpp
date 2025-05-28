@@ -59,7 +59,7 @@ bool usuarios::loginUsuarios()
         if (buscar(usuario, contra))
         {
             ingresa = true;
-            cout << "\n=== Bienvenido al Sistema "<<usuario<< "===" << endl;
+            cout << "\n=== Bienvenido al Sistema usuario: "<<usuario<< " Nombre: Luis Alberto Valenzuela Aguilar Carné: 9959-24-12583===" << endl;
             bitacora auditoria;
             auditoria.insertar(name, 100, "LOGS", "Inicio exitoso");
             cin.get();
