@@ -3,20 +3,24 @@
 
 #include <string>
 
-class Usuario {
-private:
-    std::string nombre;
-    std::string password;
-
+class usuarios {
 public:
-    Usuario();
-    Usuario(const std::string& nombre, const std::string& password);
+    usuarios();
+    ~usuarios();
+    bool loginUsuarios();
+    void menuUsuarios();
+    bool buscar(std::string user, std::string passw);
+    std::string getNombre();
+    void setNombre(std::string nombre);
+    void consultarUsuarios();
+    void agregarUsuarios();
+    void modificarUsuarios();
+    void eliminarUsuarios();
 
-    std::string getNombre() const;
-    bool verificarPassword(const std::string& pwd) const;
-
-    void guardar(std::ofstream& out) const;
-    void cargar(std::ifstream& in);
+private:
+    int id;
+    std::string name;
+    std::string pass;
 };
 
 #endif

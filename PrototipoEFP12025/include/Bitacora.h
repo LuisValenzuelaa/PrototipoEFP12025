@@ -1,11 +1,19 @@
 #ifndef BITACORA_H
 #define BITACORA_H
+#include<iostream>
+using std::string;
 
-#include <string>
+class bitacora
+{
+    public:
+        void menu();
+        void insertar(string nombre, int codigo, string aplicacion, string accion);
 
-class Bitacora {
-public:
-    static void registrar(const std::string& mensaje);
+        void desplegar();
+    protected:
+
+    private:
+		string nombre, aplicacion, accion, fecha;
+
 };
-
-#endif
+#endif // BITACORA_H
